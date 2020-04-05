@@ -9,8 +9,17 @@
 
 
 	<!-- Define your beans here -->
-	<!-- <bean id="theCoach" class="org.gaurav.MMACoach"></bean> -->
-	<bean id="theCoach" class="org.gaurav.CricketCoach"></bean>
+	<bean id="theFortune" class="org.gaurav.HappyFortuneService"></bean>
+	
+	<!-- 
+	<bean id="theCoach" class="org.gaurav.MMACoach">
+		<constructor-arg ref="theFortune"/>
+	</bean> 
+	-->
+	<bean id="theCoach" class="org.gaurav.CricketCoach">
+		<!-- Constructor Injection -->
+		<constructor-arg ref="theFortune"/>
+	</bean>
 
 </beans>
 
