@@ -9,7 +9,8 @@
 
 
 	<!-- Define your beans here -->
-	<bean id="theCoach" class="org.gaurav.MMACoach"></bean>
+	<!-- <bean id="theCoach" class="org.gaurav.MMACoach"></bean> -->
+	<bean id="theCoach" class="org.gaurav.CricketCoach"></bean>
 
 </beans>
 
