@@ -23,7 +23,10 @@
 	
 	<bean id="trackCoach" class="org.gaurav.TrackCoach">
 		<!-- Setter Injection -->
-		<property name="fortuneService" ref="theFortune"></property>
+		<property name="fortuneService" ref="theFortune" />
+		<!-- Injecting Literal values -->
+		<property name="name" value="Usain Bolt" />
+		<property name="emailAddress" value="usain@bolt.speed" />
 	</bean>
 
 </beans>
