@@ -20,6 +20,11 @@
 		<!-- Constructor Injection -->
 		<constructor-arg ref="theFortune"/>
 	</bean>
+	
+	<bean id="trackCoach" class="org.gaurav.TrackCoach">
+		<!-- Setter Injection -->
+		<property name="fortuneService" ref="theFortune"></property>
+	</bean>
 
 </beans>
 
