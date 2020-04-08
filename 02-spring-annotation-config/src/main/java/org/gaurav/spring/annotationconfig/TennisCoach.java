@@ -25,9 +25,15 @@ public class TennisCoach implements Coach {
 	}
 
 	// Setter Injection
+	/*
 	@Autowired
 	public void setFortuneService(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
-
+	*/
+	// Method Injection
+	@Autowired
+	public void doSomeCrazyStuff(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
 }
