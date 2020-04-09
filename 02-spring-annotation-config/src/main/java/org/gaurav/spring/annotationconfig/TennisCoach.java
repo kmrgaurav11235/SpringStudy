@@ -1,12 +1,15 @@
 package org.gaurav.spring.annotationconfig;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+// @Scope("prototype")
 public class TennisCoach implements Coach {
 	
 	// Field Injection
@@ -45,4 +48,14 @@ public class TennisCoach implements Coach {
 		this.fortuneService = fortuneService;
 	}
 	*/
+	
+	@PostConstruct
+	public void doMyStartUpStuff() {
+		System.out.println(">> TennisCoach: Inside doMyStartUpStuff().");
+	}
+	
+	@PreDestroy
+	public void doMyCleanUpStuff() {
+		System.out.println(">> TennisCoach: Inside doMyCleanUpStuff().");
+	}
 }
