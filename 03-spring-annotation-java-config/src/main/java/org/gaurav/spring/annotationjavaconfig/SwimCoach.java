@@ -1,8 +1,16 @@
 package org.gaurav.spring.annotationjavaconfig;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class SwimCoach implements Coach {
 	
 	private FortuneService fortuneService;
+	
+	@Value("${foo.name}")
+	private String name;
+	
+	@Value("${foo.email}")
+	private String email;
 
 	public SwimCoach(FortuneService fortuneService) {
 		super();
@@ -17,4 +25,11 @@ public class SwimCoach implements Coach {
 		return fortuneService.getDailyFortune();
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
 }
